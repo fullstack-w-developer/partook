@@ -8,5 +8,34 @@ body {
   margin: 0;
   overflow-x: hidden;
   direction: rtl;
+}
+
+html,
+body {
   font-family: 'Lato', sans-serif;
+}
+
+.flexAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --bg-btn: #E4C590;
+  --color-white: #fff;
+  --color-black:#222;
 }
