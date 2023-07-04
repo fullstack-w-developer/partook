@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 35px;
+}
+
 :root {
   --bg-btn: #E4C590;
   --color-white: #fff;

@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
+import Slider from '../SliderShow/Slider';
 
 const Header = () => {
   return (
@@ -18,6 +19,7 @@ const Header = () => {
       <div>
         <Button text="Find a Bookshop" />
       </div>
+      <Slider />
     </div>
   )
 }
