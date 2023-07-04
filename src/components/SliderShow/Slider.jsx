@@ -20,21 +20,18 @@ export default () => {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
       breakpoints={{
-        260:1
+        260: 1
       }}
     >
       <SwiperSlide>
-        <Slide imgSlide={imgInside}/>
+        <Slide imgSlide={imgInside} />
       </SwiperSlide>
       <SwiperSlide>
-        <Slide imgSlide={imgOutside}/>
+        <Slide imgSlide={imgOutside} />
       </SwiperSlide>
       <SwiperSlide>
-        <Slide imgSlide={bookSell}/>
+        <Slide imgSlide={bookSell} />
       </SwiperSlide>
     </Swiper>
   );

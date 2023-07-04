@@ -1,26 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
-import Slider from '../SliderShow/Slider';
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
+import { ContextHeaderFooter } from '../../context/ContextHeaderFooter';
+import "../../styles/Header.css"
+import Menu from '../Menu/Menu';
 
 const Header = () => {
+  const [openMenu, setOpenMenu] = useState(false)
   return (
-    <div>
-      <div>
-        <button>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-          </svg>
-        </button>
-      </div>
-      <div>
-        <Logo />
-      </div>
-      <div>
-        <Button text="Find a Bookshop" />
-      </div>
-      <Slider />
-    </div>
+   <ContextHeaderFooter.Consumer>
+    {({headerContent}) => (
+       <div className='flexAlign' >
+       <div>
+         <Button text="Find a Bookshop" />
+       </div>
+       <div>
+         <Logo />
+       </div>
+       <div>
+         <HiOutlineMenuAlt1 className='menuIcon' size={26} onClick={() => setOpenMenu(openMenu)}/>
+       </div>
+    {
+      openMenu && (
+        <Menu />
+      )
+    }
+    <div onClick={() => setOpenMenu(!openMenu)} className='bg-cover'></div>
+     </div>
+    )}
+   </ContextHeaderFooter.Consumer>
   )
 }
 

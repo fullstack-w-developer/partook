@@ -1,10 +1,10 @@
-import React from 'react'
-import Header from '../components/Header/Header'
+import React from 'react';
+import Slider from "../components/SliderShow/Slider";
 
 const Home = () => {
   return (
     <div>
-        <Header />
+        <Slider />
     </div>
   )
 }
