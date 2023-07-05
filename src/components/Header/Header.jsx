@@ -15,7 +15,7 @@ const Header = () => {
       {({ headerContent }) => (
         <div className='header-menu' >
           <Slider />
-          <div className='head flexAlign grid md:px-20 px-10'>
+          <div className='head flexAlign grid'>
             <div>
               <Button text="Find a Bookshop" />
             </div>

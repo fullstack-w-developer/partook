@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Logo = () => {
   return (
     <Link>
-    <div>Logo</div>
+      <div>Logo</div>
     </Link>
   )
 }

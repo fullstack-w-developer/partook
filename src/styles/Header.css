@@ -9,7 +9,8 @@
     right: 0;
     left: 0;
     bottom: 0;
-    opacity: .7;
+    opacity: .9;
+    height: 100vh;
 }
 
 .head {
@@ -20,5 +21,60 @@
     z-index: 9999;
     color: #fff;
     width: 100%;
-    margin-top: 42px;
+    /* margin-top: 42px; */
+}
+
+.menu-left {
+    background-color: var(--color-black);
+    overflow-y: auto;
+    width: 360px;
+    height: 790px;
+    padding: 40px;
+    position: relative;
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.close-menu {
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.content-menu h1 {
+    margin: 50px 0 30px;
+}
+
+.content-menu span {
+    border: 2px solid var(--bg-btn);
+    background-color: var(--color-black);
+    width: 13px;
+    height: 13px;
+    transform: rotate(45deg);
+    margin: 23px auto;
+}
+
+.content-menu a {
+    font-size: 35px;
+    color: var(--bg-btn);
+    font-weight: 800;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.content-menu a::before {
+    content: "";
+    background-color: var(--bg-btn);
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    opacity: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.content-menu a:hover::before {
+    opacity: 1;
 }

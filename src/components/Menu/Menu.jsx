@@ -1,20 +1,22 @@
 import React from 'react';
-import {RiCloseLine} from "react-icons/ri";
+import { RiCloseLine } from "react-icons/ri";
 import Logo from "../Logo/Logo"
- 
-const Menu = ({state, setState}) => {
+
+const Menu = ({ state, setState }) => {
   return (
-    <div>
-        <div>
-            <RiCloseLine onClick={() => setState(!state)}/>
-        </div>
-        <Logo />
-        <div>
-            <h4>Visit Us</h4>
-            <p>Tehran,Africa St, tehran 9899,IR</p>
-            <p>Bookshop@test.com</p>
-            <h2>+987654321</h2>
-        </div>
+    <div className='flexCol menu-left'>
+      <div>
+        <RiCloseLine onClick={() => setState(!state)} className='close-menu'/>
+      </div>
+      <Logo />
+      <div className='content-menu flexCol'>
+        <h1>Visit Us</h1>
+        <p>Tehran,Africa St, tehran 9899,IR</p>
+        <p>Bookshop@test.com</p>
+        <span></span>
+        <p>Booking Request</p>
+        <a href='#'>+987654321</a>
+      </div>
     </div>
   )
 }
