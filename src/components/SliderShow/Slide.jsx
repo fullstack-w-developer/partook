@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import Button from '../Button/Button';
-import "../../styles/Slider.css"
+import "../../styles/Slider.css";
+import patternImg from "../../assets/svg/patternImg.svg"
 
 const textSlide = [
     {
@@ -18,13 +19,14 @@ const textSlide = [
     }
 ]
 
-
 const Slide = ({ imgSlide }) => {
     return (
-        <div className='bgSlide' style={{ backgroundImage: `url(${imgSlide})` }}>
+        <div className='bgSlide flexCol' style={{ backgroundImage: `url(${imgSlide})` }}>
+            <h6>delightful experience</h6>
+            <img src={patternImg} alt="pattern" />
             {textSlide.map(txt => {
                 return (
-                    <div className='detailSlide flexAlign'>
+                    <div className='detailSlide'>
                         <h1>
                             {txt.textMain}
                         </h1>

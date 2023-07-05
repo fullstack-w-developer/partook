@@ -2,11 +2,11 @@ import React from 'react';
 import {RiCloseLine} from "react-icons/ri";
 import Logo from "../Logo/Logo"
  
-const Menu = () => {
+const Menu = ({state, setState}) => {
   return (
     <div>
         <div>
-            <RiCloseLine />
+            <RiCloseLine onClick={() => setState(!state)}/>
         </div>
         <Logo />
         <div>

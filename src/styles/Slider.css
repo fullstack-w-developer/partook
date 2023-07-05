@@ -1,10 +1,34 @@
+#root {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
 .bgSlide {
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+    padding-top: 130px;
+}
+
+.bgSlide h6, .bgSlide img {
+    z-index: 999;
+    position: relative;
+}
+
+.bgSlide h6 {
+    color: var(--bg-btn);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.bgSlide img {
+    max-width: 150px;
+    margin: 17px 0 30px;
 }
 
 .bgSlide:after {
@@ -15,7 +39,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    opacity: .5;
+    opacity: .7;
     z-index: 1;
 }
 
@@ -24,6 +48,15 @@
     position: relative;
 }
 
+.detailSlide h1 {
+    max-width: 1007px;
+}
+
 .detailSlide h1, .detailSlide p{
     color: var(--color-white);
+}
+
+.detailSlide p {
+    margin: 10px 0;
+    font-weight: 700;
 }

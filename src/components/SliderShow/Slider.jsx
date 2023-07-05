@@ -18,7 +18,6 @@ export default () => {
     <Swiper
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
       slidesPerView={1}
       breakpoints={{
         260: 1

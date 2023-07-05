@@ -6,7 +6,7 @@ const Footer = () => {
     <ContextHeaderFooter.Consumer>
         {({footerContent}) => (
             <div>
-                footer
+                
             </div>
         )}
     </ContextHeaderFooter.Consumer>

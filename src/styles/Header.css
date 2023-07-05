@@ -1,4 +1,4 @@
-.menuIcon {
+.menu-icon {
     cursor: pointer;
 }
 
@@ -9,5 +9,16 @@
     right: 0;
     left: 0;
     bottom: 0;
-    opacity: .5;
+    opacity: .7;
+}
+
+.head {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999;
+    color: #fff;
+    width: 100%;
+    margin-top: 42px;
 }
