@@ -1,10 +1,10 @@
 import React from 'react';
 import { RiCloseLine } from "react-icons/ri";
-import Logo from "../Logo/Logo"
+import Logo from "../Logo/Logo";
 
 const Menu = ({ state, setState }) => {
   return (
-    <div className='flexCol menu-left'>
+    <div className='flexCol menu-left sm:w-[360px] w-[260px]'>
       <div>
         <RiCloseLine onClick={() => setState(!state)} className='close-menu'/>
       </div>

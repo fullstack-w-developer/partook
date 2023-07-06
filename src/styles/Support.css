@@ -1,0 +1,24 @@
+.support {
+    background-color: var(--color-secondary);
+    padding: 20px 0;
+}
+
+.support p {
+    font-weight: 600;
+    font-size: 20px;
+    margin: auto;
+    max-width: 700px;
+    color: var(--color-black);
+}
+
+.support h1 {
+    font-weight: 700;
+    margin: 20px;
+    color: var(--color-black);
+}
+
+.support img {
+    border-radius: 7px;
+    margin: 30px auto;
+    width: 300px;
+}

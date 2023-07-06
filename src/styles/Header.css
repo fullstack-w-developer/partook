@@ -4,7 +4,7 @@
 
 .bg-cover {
     background-color: var(--color-black);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -21,13 +21,12 @@
     z-index: 9999;
     color: #fff;
     width: 100%;
-    /* margin-top: 42px; */
+    margin-top: 42px;
 }
 
 .menu-left {
     background-color: var(--color-black);
     overflow-y: auto;
-    width: 360px;
     height: 790px;
     padding: 40px;
     position: relative;

@@ -23,7 +23,6 @@
 .bgSlide h6 {
     color: var(--bg-btn);
     font-weight: 700;
-    letter-spacing: 2px;
 }
 
 .bgSlide img {
@@ -49,7 +48,7 @@
 }
 
 .detailSlide h1 {
-    max-width: 1007px;
+    max-width: 668px;
 }
 
 .detailSlide h1, .detailSlide p{

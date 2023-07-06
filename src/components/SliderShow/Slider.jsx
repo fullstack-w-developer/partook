@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -17,9 +17,13 @@ export default () => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       slidesPerView={1}
-      spaceBetween={30}
+      spaceBetween={10}
+      autoplay={{
+        delay:5500,
+      }}
+      loop={true}
       breakpoints={{
         260: 1
       }}

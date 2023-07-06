@@ -1,0 +1,53 @@
+.welcome {
+    margin: 70px 0 130px;
+}
+
+.welcome h1 {
+    font-weight: 600;
+    background: -webkit-linear-gradient(var(--color-main), var(--bg-btn));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 22px;
+    max-width: 543px;
+    justify-content: center;
+    margin: auto;
+}
+
+.inputUser {
+    border: 1px solid var(--border-gray);
+    width: 500px;
+    justify-content: center;
+    margin: 30px auto 30px;
+    padding: 8px 10px 8px 20px;
+    border-radius: 39px;
+    justify-content: space-between;
+    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.inputUser input {
+    width: 80%;
+    direction: ltr;
+    font-size: 17px;
+}
+
+.inputUser button {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-radius: 30px;
+    padding: 10px 0;
+    width: 80px;
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 1;
+    transition: opacity .4s ease-in-out;
+}
+
+.inputUser button:hover {
+    opacity: .8;
+}

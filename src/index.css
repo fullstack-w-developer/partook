@@ -12,7 +12,7 @@ body {
 
 html,
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Iranian Sans', sans-serif;
 }
 
 .flexAlign {
@@ -37,9 +37,16 @@ h1 {
   font-size: 35px;
 }
 
+input:focus {
+  outline: none;
+}
+
 :root {
-  --bg-btn: #E4C590;
+  --color-main: #D1913C;
+  --color-secondary:#FFFFE0;
+  --bg-btn: #ffdbad;
   --color-white: #fff;
-  --color-black:#222;
-  --color-gray:#A6B0C2;
+  --color-black: #333;
+  --color-gray: #A6B0C2;
+  --border-gray:#DEE2E6;
 }

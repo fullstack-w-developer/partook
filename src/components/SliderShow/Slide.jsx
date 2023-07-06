@@ -22,7 +22,7 @@ const textSlide = [
 const Slide = ({ imgSlide }) => {
     return (
         <div className='bgSlide flexCol' style={{ backgroundImage: `url(${imgSlide})` }}>
-            <h6>delightful experience</h6>
+            <h6>تجربه لذت بخش</h6>
             <img src={patternImg} alt="pattern" />
             {textSlide.map(txt => {
                 return (
@@ -36,7 +36,7 @@ const Slide = ({ imgSlide }) => {
                     </div>
                 )
             })}
-            <Button text="View Our Bookshop" />
+            <Button text="کتابفروشی های ما رو ببین" />
         </div>
     )
 }
