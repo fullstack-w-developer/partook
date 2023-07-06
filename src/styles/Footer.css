@@ -1,0 +1,25 @@
+.footerText {
+    margin-bottom: 20px;
+    transition: color .4s ease-in-out;
+    cursor: pointer;
+}
+
+.footerText p {
+    color: var(--color-gray);
+    font-weight: 700;
+}
+
+.socialMedia {
+    margin-bottom: 50px;
+    transition: color .4s ease-in-out;
+    cursor: pointer;
+}
+
+.socialIcon {
+    color: var(--color-gray);
+}
+
+.socialIcon:hover,
+.footerText p:hover {
+    color: var(--bg-btn);
+}
