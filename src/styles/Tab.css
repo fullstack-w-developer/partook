@@ -1,0 +1,21 @@
+.aboutusProf p {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.aboutusProf span {
+    font-weight: 500;
+    color: var(--color-gray);
+    margin-bottom: 30px;
+}
+
+.linkSocialmedia {
+    border: 1px solid var(--border-gray);
+    border-radius: 7px;
+    padding: 10px 0;
+    width: 70px;
+    margin-left: 7px;
+    justify-content: center;
+}
