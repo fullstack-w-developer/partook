@@ -18,9 +18,10 @@ const Tab = () => {
                     </p>
                     {/* counter */}
                     <span>نام پرداخت کننده(اختیاری)</span>
-                    <input type="textarea" />
+                    <textarea cols="550" rows="200"></textarea>
                     <span>متن پیام(اختیاری)</span>
-                    <input type="textarea" />
+                    <textarea cols="550" rows="200"></textarea>
+                    <button>پرداخت</button>
                 </div>
                 <div className='aboutusProf'>
                     <p>درباره ما</p>

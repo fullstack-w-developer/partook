@@ -1,17 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import book from "../../assets/images/book.jpg";
+import "../../styles/Tab.css";
+import Tab from '../Tab/Tab';
+import { IoCloseSharp } from "react-icons/io";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { PiInstagramLogoFill } from "react-icons/"
 
 const SharePartook = () => {
+    const [modal, setOpenModal] = useState(false);
     return (
         <div>
-            <div>
+            <div className='sharePartook flexCol'>
                 <img src={book} alt="book" />
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <button onClick={() => setOpenModal()}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
                     </svg>
                 </button>
             </div>
+            {/* modal */}
+            <div>
+                <div className="">
+                    <h1>اشتراک گذاری پروفایل پرتوک</h1>
+                    <IoCloseSharp />
+                </div>
+                <div>
+                    <div>
+                        <FaLinkedinIn size={24} className='socialIcon' />
+                        <span>لینکدین</span>
+                    </div>
+                    <div>
+                        <FaTwitter size={24} className='socialIcon' />
+                        <span>توییتر</span>
+                    </div>
+                    <div>
+                        <PiInstagramLogoFill size={24} className='socialIcon' />
+                        <span>اینستاگرام</span>
+                    </div>
+                    <div>
+                        <FaTelegramPlane />
+                        <span>تلگرام</span>
+                    </div>
+                </div>
+            </div>
+            {/* modal */}
             <p>پرتوک</p>
             <div>
                 <button>
@@ -35,6 +69,7 @@ const SharePartook = () => {
                     </svg>
                 </button>
             </div>
+            <Tab />
         </div>
     )
 }
