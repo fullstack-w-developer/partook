@@ -16,7 +16,7 @@
 }
 
 .bgSlide h6, .bgSlide img {
-    z-index: 999;
+    z-index: 8;
     position: relative;
 }
 
