@@ -11,6 +11,7 @@
 }
 
 .aboutusProf p {
+    display: flex;
     color: var(--color-black);
     font-weight: 600;
     font-size: 18px;
@@ -18,9 +19,14 @@
 }
 
 .aboutusProf span {
+    display: flex;
     font-weight: 500;
     color: var(--color-gray);
     margin-bottom: 30px;
+}
+
+.linkSocial {
+    justify-content: space-between;
 }
 
 .linkSocialmedia {
@@ -29,7 +35,8 @@
     padding: 10px 0;
     width: 70px;
     margin-left: 7px;
-    justify-content: center;
+    height: 40px;
+    justify-content: space-between;
 }
 
 .sharePartook {
@@ -129,12 +136,27 @@
     color: var(--color-black);
 }
 
+
+
 .iconsPartook {
-    margin-left: 20px;
-    border: 1px solid var(--border-gray);
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-gray);
+    justify-content: center;
+    margin: 20px 10px 30px;
+}
+
+.dot {
+    color: var(--color-gray);
+}
+
+.eye {
+    color: var(--color-main);
+}
+
+.book {
+    color: var(--bg-btn);
 }
 
 .heart {
@@ -143,4 +165,73 @@
 
 .detailIcon {
     justify-content: center;
+}
+
+.btnProf {
+    margin-left: 40px;
+}
+
+.btnArticle,
+.btnProf {
+    color: var(--color-main);
+    font-weight: 600;
+}
+
+.btnGray {
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+
+.payBox, .aboutusProf {
+    border: 1px solid var(--border-gray);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.payBox p {
+    color: var(--color-black);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.payer span {
+    display: flex;
+    color: var(--color-gray);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.payer input {
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 7px 15px;
+    margin-bottom: 20px;
+}
+
+.payer textarea {
+    height: 100px;
+    border: 1px solid var(--border-gray);
+    outline: none;
+    border-radius: 6px;
+}
+
+.btnPay {
+    background-color: var(--color-main);
+    border-radius: 8px;
+    padding: 10px 0;
+    margin: 40px 0;
+    width: 100%;
+    font-size: 18px;
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.payer textarea:focus,
+.payer input:focus {
+    border: 1px solid var(--color-main);
+}
+
+.profileTab {
+    margin-top: 50px;
 }

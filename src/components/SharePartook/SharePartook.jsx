@@ -8,10 +8,10 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { HiShare } from "react-icons/hi";
-import {AiOutlineEye} from "react-icons/ai";
-import {BsThreeDots} from "react-icons/bs";
-import {AiOutlineHeart} from "react-icons/ai";
-import {BsBook} from "react-icons/bs";
+import { AiOutlineEye } from "react-icons/ai";
+import { BsThreeDots } from "react-icons/bs";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BsBook } from "react-icons/bs";
 
 const SharePartook = () => {
     const [modal, setOpenModal] = useState(false);
@@ -28,7 +28,7 @@ const SharePartook = () => {
                         <div className='modalPage '>
                             <div className="flexAlign modal">
                                 <h1>اشتراک گذاری پروفایل پرتوک</h1>
-                                <VscChromeClose className='closeModal' size={28} onClick={() => setOpenModal(!modal)}/>
+                                <VscChromeClose className='closeModal' size={28} onClick={() => setOpenModal(!modal)} />
                             </div>
                             <div className='grid grid-cols-2 gap-6'>
                                 <div className='flexAlign social flexAlign'>
@@ -55,13 +55,21 @@ const SharePartook = () => {
             }
             {/* modal */}
             <div className="textModal">
-            <p>پرتوک</p>
-            <div className='flexAlign detailIcon'>
-                <BsThreeDots className='iconsPartook' />
-                <AiOutlineEye className='iconsPartook' />
-                <BsBook className='iconsPartook' />
-                <AiOutlineHeart className='iconsPartook heart' />
-            </div>
+                <p>پرتوک</p>
+                <div className='flexAlign detailIcon'>
+                    <div className='iconsPartook flexAlign'>
+                        <BsThreeDots className='dot' size={24}/>
+                    </div>
+                    <div className='iconsPartook flexAlign'>
+                        <AiOutlineEye className='eye' size={24}/>
+                    </div>
+                    <div className='iconsPartook flexAlign'>
+                        <BsBook className='book' size={24}/>
+                    </div>
+                    <div className='iconsPartook flexAlign'>
+                        <AiOutlineHeart className='heart' size={24}/>
+                    </div>
+                </div>
             </div>
             <Tab />
         </div>
