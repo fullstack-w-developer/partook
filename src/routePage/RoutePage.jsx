@@ -6,6 +6,7 @@ import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
 import Question from "../pages/Question";
 import Guide from "../pages/Guide";
+import Login from '../pages/Login';
 
 const RoutePage = () => {
     return (
@@ -17,6 +18,7 @@ const RoutePage = () => {
                 <Route path='contact' element={<Contact />} /><Route path='aboutus' element={<AboutUs />} />
                 <Route path='question' element={<Question />} />
                 <Route path='guide' element={<Guide />} />
+                <Route path='login' element={<Login />}/>
             </Routes>
         </div>
     )
