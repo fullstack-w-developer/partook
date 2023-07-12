@@ -1,4 +1,4 @@
-.articles {
+.articles, .articlesSearch {
     border: 1px solid var(--border-gray);
     border-radius: 15px;
     padding: 10px;
@@ -29,7 +29,9 @@
 }
 
 .headArticle {
+    cursor: pointer;
     font-size: 18px;
+    color: var(--color-black);
     transition: color .3s ease-in-out;
 }
 
@@ -43,6 +45,7 @@
     width: 100px;
     height: 100px;
     border-radius: 20px;
+    margin: 16px 0;
 }
 
 .contentArticle span {
@@ -50,8 +53,99 @@
     font-weight: 600;
 }
 
+.headArticle:hover {
+    color: var(--color-main);
+}
+
 .contentArticle {
     border-bottom: 1px solid var(--color-gray);
     padding-bottom: 20px;
     margin-bottom: 30px;
+}
+
+.btnArticle {
+    justify-content: center;
+    margin: 30px 0 16px;
+}
+
+.content {
+    border-radius: 20px;
+    border: 1px solid var(--border-gray);
+    padding: 20px;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.contentPage {
+    justify-content: space-between;
+}
+
+.iconDot {
+    position: relative;
+}
+
+.boxOpen {
+    position: absolute;
+    border: 1px solid var(--border-gray);
+    border-radius: 10px;
+    background-color: var(--color-white);
+    left: 0;
+    margin-top: 80px;
+    width: 110px;
+    height: 50px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.headerArticles {
+    color: var(--color-main);
+    font-weight: 600;
+    margin: 20px;
+}
+
+.bookArticle {
+    justify-content: center;
+    border-radius: 6px;
+    margin: 30px auto;
+}
+
+.likeArticle {
+    margin-left: 30px;
+    color: red;
+}
+
+.disslike {
+    color: var(--color-black);
+}
+
+.articlesSearch {
+   height: 400px;
+}
+
+.articles input {
+    border: 1px solid var(--border-gray);
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.searchArticle {
+    background-color: var(--color-main);
+    border-radius: 10px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-gray);
+    margin-bottom: 10px;
+    color: var(--color-white);
+    justify-content: center;
+}
+
+.bgBtn  {
+    background-color: var(--bg-btn);
+    border-radius: 10px;
+    padding: 2px 8px;
+}
+
+.bgBtn span {
+    color: var(--color-white);
+    font-weight: 600;
 }

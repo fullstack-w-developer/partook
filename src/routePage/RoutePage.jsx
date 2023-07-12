@@ -7,6 +7,7 @@ import AboutUs from "../pages/AboutUs";
 import Question from "../pages/Question";
 import Guide from "../pages/Guide";
 import Login from '../pages/Login';
+import Articles from '../pages/Articles';
 
 const RoutePage = () => {
     return (
@@ -15,10 +16,12 @@ const RoutePage = () => {
                 <Route index element={<Home />} />
                 <Route path="donait" element={<Donait />} />
                 <Route path='contact' element={<Contact />} />
-                <Route path='contact' element={<Contact />} /><Route path='aboutus' element={<AboutUs />} />
+                <Route path='contact' element={<Contact />} />
+                <Route path='aboutus' element={<AboutUs />} />
                 <Route path='question' element={<Question />} />
                 <Route path='guide' element={<Guide />} />
-                <Route path='login' element={<Login />}/>
+                <Route path='login' element={<Login />} />
+                <Route path='donait/articles' element={<Articles />} />
             </Routes>
         </div>
     )
