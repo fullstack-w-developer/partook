@@ -30,25 +30,17 @@ const Profile = () => {
                 </span>
                 <p>لینک صفحات کافیته در دیگر سایت ها</p>
                 <div className='flexAlign linkSocial'>
-                    <div className='linkSocialmedia flexAlign'>
-                        <div>
-                            <FaTwitter size={24} className='' />
-                        </div>
-                        <div>
-                            <span>توییتر</span>
-                        </div>
+                    <div className='linkSocialmedia'>
+                        <FaTwitter size={24} />
                     </div>
-                    <div className='linkSocialmedia flexAlign'>
-                        <FaLinkedinIn size={24} className='' />
-                        <span>لینکدین</span>
+                    <div className='linkSocialmedia'>
+                        <FaLinkedinIn size={24} />
                     </div>
-                    <div className='linkSocialmedia flexAlign'>
-                        <AiFillInstagram size={24} className='' />
-                        <span>اینستاگرام</span>
+                    <div className='linkSocialmedia'>
+                        <AiFillInstagram size={24} />
                     </div>
-                    <div className='linkSocialmedia flexAlign'>
+                    <div className='linkSocialmedia'>
                         <FaTelegramPlane size={24} />
-                        <span>تلگرام</span>
                     </div>
                 </div>
             </div>
