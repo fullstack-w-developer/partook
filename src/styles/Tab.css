@@ -137,6 +137,7 @@
 .textModal p {
     font-weight: 600;
     color: var(--color-black);
+    justify-content: center;
 }
 
 
@@ -174,11 +175,11 @@
     margin-left: 40px;
 }
 
-.btnArticle {
+.btnArticlesTab {
     margin-right: 40px;
 }
 
-.btnArticle,
+.btnArticlesTab,
 .btnProf {
     color: var(--color-main);
     font-weight: 600;
@@ -189,8 +190,13 @@
     font-weight: 600;
 }
 
+.btnTabArticle {
+    justify-content: center;
+}
 
-.payBox, .aboutusProf {
+
+.payBox,
+.aboutusProf {
     border: 1px solid var(--border-gray);
     padding: 20px;
     border-radius: 10px;

@@ -26,7 +26,7 @@ const Slide = ({ imgSlide }) => {
             <img src={patternImg} alt="pattern" />
             {textSlide.map(txt => {
                 return (
-                    <div className='detailSlide'>
+                    <div className='detailSlide flexCol md:px-20 px-10'>
                         <h1>
                             {txt.textMain}
                         </h1>

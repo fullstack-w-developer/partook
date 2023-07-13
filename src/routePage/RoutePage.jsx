@@ -8,6 +8,7 @@ import Question from "../pages/Question";
 import Guide from "../pages/Guide";
 import Login from '../pages/Login';
 import Articles from '../pages/Articles';
+import TermsAndConditions from '../pages/TermsAndConditions';
 
 const RoutePage = () => {
     return (
@@ -22,6 +23,7 @@ const RoutePage = () => {
                 <Route path='guide' element={<Guide />} />
                 <Route path='login' element={<Login />} />
                 <Route path='donait/articles' element={<Articles />} />
+                <Route path='donait/termsandconditions' element={<TermsAndConditions />} />
             </Routes>
         </div>
     )

@@ -13,12 +13,12 @@ const contentArticles = [
 
 const Article = () => {
   return (
-    <div className='grid md:grid-cols-2 grid-cols-1 gap-20'>
+    <div className='grid md:grid-cols-2 grid-cols-1 gap-8 profileTab'>
       <div className='articlesSearch'>
-        <p>جستجوی مقاله</p>
+        <p className='flex'>جستجوی مقاله</p>
         <input type="text" />
         <div className='searchArticle flexAlign'>
-          <ImSearch className='flexAlign items-center'/>
+          <ImSearch className='flexAlign items-center' />
         </div>
         <div className='flexAlign'>
           <div className='bgBtn flexAlign'>
@@ -33,7 +33,7 @@ const Article = () => {
         </div>
       </div>
       <div className='articles'>
-        <p>مقاله ها</p>
+        <p className='flex'>مقاله ها</p>
         <div className='bgArticle'>
           <div className='articlesStart flexAlign'>
             <div className='partookArticle'>
@@ -56,9 +56,9 @@ const Article = () => {
                     <span>
                       {article.content}
                     </span>
-                    <div className="flexAlign btnArticle">
+                    <Link to={article.id === 1 ? "articles" : "termsandconditions"} className="flexAlign btnArticleConti">
                       <Button text="ادامه مقاله" />
-                    </div>
+                    </Link>
                   </div>
                 </div>
               )

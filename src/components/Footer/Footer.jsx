@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <ContextHeaderFooter.Consumer>
       {({ footerContent }) => (
-        <div className='flexCol'>
-          <div className='grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 footer'>
+        <div className='flexCol text-center'>
+          <div className='grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 footer md:px-20 px-10'>
             <Link to="donait" className='footerText'>حمایت از پرتوک</Link>
             <Link to="contact" className='footerText'>تماس با ما</Link>
             <Link to="aboutus" className='footerText'>درباره ما</Link>
@@ -19,9 +19,9 @@ const Footer = () => {
             <Link to="question" className='footerText'>سوالات متداول</Link>
           </div>
           <div className='flexAlign socialMedia'>
-            <FaLinkedinIn size={24} className='socialIcon'/>
-            <FaTwitter size={24} className='socialIcon'/>
-            <PiInstagramLogoFill size={24} className='socialIcon'/>
+            <FaLinkedinIn size={24} className='socialIcon' />
+            <FaTwitter size={24} className='socialIcon' />
+            <PiInstagramLogoFill size={24} className='socialIcon' />
           </div>
         </div>
       )}

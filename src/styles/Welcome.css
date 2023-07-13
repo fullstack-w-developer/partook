@@ -1,5 +1,6 @@
 .welcome {
     margin: 70px 0 130px;
+    align-items: center;
 }
 
 .welcome h1 {
@@ -13,10 +14,8 @@
 .welcome p {
     color: var(--color-black);
     font-weight: 600;
-    font-size: 22px;
     max-width: 543px;
-    justify-content: center;
-    margin: auto;
+    text-align: center;
 }
 
 .inputUser {
@@ -27,7 +26,7 @@
     padding: 8px 10px 8px 20px;
     border-radius: 39px;
     justify-content: space-between;
-    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .inputUser input {

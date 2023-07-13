@@ -15,7 +15,8 @@
     padding-top: 130px;
 }
 
-.bgSlide h6, .bgSlide img {
+.bgSlide h6,
+.bgSlide img {
     z-index: 8;
     position: relative;
 }
@@ -45,13 +46,16 @@
 .detailSlide {
     z-index: 999;
     position: relative;
+    justify-content: center;
+    text-align: center;
 }
 
 .detailSlide h1 {
     max-width: 668px;
 }
 
-.detailSlide h1, .detailSlide p{
+.detailSlide h1,
+.detailSlide p {
     color: var(--color-white);
 }
 

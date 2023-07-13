@@ -53,7 +53,7 @@ const SharePartook = () => {
             }
             {/* modal */}
             <div className="textModal">
-                <p>پرتوک</p>
+                <p className='flexAlign'>پرتوک</p>
                 <div className='flexAlign detailIcon'>
                     <div className='iconsPartook flexAlign'>
                         <BsThreeDots className='dot' size={24} />

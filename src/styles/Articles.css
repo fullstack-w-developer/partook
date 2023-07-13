@@ -1,4 +1,5 @@
-.articles, .articlesSearch {
+.articles,
+.articlesSearch {
     border: 1px solid var(--border-gray);
     border-radius: 15px;
     padding: 10px;
@@ -7,13 +8,17 @@
 .articles p,
 .partookArticle span,
 .dateArticle span,
-.headArticle {
+.headArticle,
+.articlesSearch p,
+.headArticleDonait,
+.headerArticles {
     color: var(--color-black);
     font-weight: 600;
     margin-bottom: 20px;
 }
 
-.partookArticle span {
+.partookArticle span,
+.articlesSearch p {
     margin-bottom: 0;
 }
 
@@ -63,16 +68,16 @@
     margin-bottom: 30px;
 }
 
-.btnArticle {
+.btnArticleConti {
     justify-content: center;
     margin: 30px 0 16px;
+    cursor: pointer;
 }
 
 .content {
     border-radius: 20px;
     border: 1px solid var(--border-gray);
-    padding: 20px;
-    padding-top: 30px;
+    padding: 45px;
     margin-top: 20px;
 }
 
@@ -99,8 +104,7 @@
 
 .headerArticles {
     color: var(--color-main);
-    font-weight: 600;
-    margin: 20px;
+    justify-content: center;
 }
 
 .bookArticle {
@@ -119,7 +123,7 @@
 }
 
 .articlesSearch {
-   height: 400px;
+    height: 300px;
 }
 
 .articles input {
@@ -132,14 +136,14 @@
 .searchArticle {
     background-color: var(--color-main);
     border-radius: 10px;
-    padding-bottom: 40px;
     border-bottom: 1px solid var(--border-gray);
-    margin-bottom: 10px;
     color: var(--color-white);
     justify-content: center;
+    margin-bottom: 30px;
+    height: 43px;
 }
 
-.bgBtn  {
+.bgBtn {
     background-color: var(--bg-btn);
     border-radius: 10px;
     padding: 2px 8px;
@@ -148,4 +152,20 @@
 .bgBtn span {
     color: var(--color-white);
     font-weight: 600;
+}
+
+.articlesSearch input {
+    margin: 25px 0;
+    border: 1px solid var(--border-gray);
+    width: 100%;
+    border-radius: 10px;
+    height: 40px;
+}
+
+ol {
+    list-style: auto !important;
+}
+
+.listArticle li {
+    line-height: 1.9;
 }
