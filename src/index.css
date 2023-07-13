@@ -50,3 +50,15 @@ input:focus {
   --color-gray: #A6B0C2;
   --border-gray:#DEE2E6;
 }
+
+@media screen and (max-width:640px) {
+  h1 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  h1 {
+    font-size: 29px;
+  }
+}

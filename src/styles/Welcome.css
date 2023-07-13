@@ -20,7 +20,7 @@
 
 .inputUser {
     border: 1px solid var(--border-gray);
-    width: 500px;
+    width: 60%;
     justify-content: center;
     margin: 30px auto 30px;
     padding: 8px 10px 8px 20px;

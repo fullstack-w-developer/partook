@@ -1,0 +1,27 @@
+.aboutUs {
+    border: 1px solid var(--border-gray);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.aboutUs p,
+.aboutUs h1,
+.aboutUs span {
+    color: var(--color-black);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.aboutUs span {
+    opacity: .7;
+}
+
+.socialLinkUs {
+    justify-content: center;
+}
+
+.socialLinkUs img {
+    width: 50px;
+    margin-left: 30px;
+}
