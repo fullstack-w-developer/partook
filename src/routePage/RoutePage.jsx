@@ -4,7 +4,7 @@ import Home from '../pages/home';
 import Donait from "../pages/Donait";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
-import Question from "../pages/Question";
+import FAQ from "../pages/FAQ";
 import Guide from "../pages/Guide";
 import Login from '../pages/Login';
 import Articles from '../pages/Articles';
@@ -17,9 +17,8 @@ const RoutePage = () => {
                 <Route index element={<Home />} />
                 <Route path="donait" element={<Donait />} />
                 <Route path='contact' element={<Contact />} />
-                <Route path='contact' element={<Contact />} />
                 <Route path='aboutus' element={<AboutUs />} />
-                <Route path='question' element={<Question />} />
+                <Route path='faq' element={<FAQ />} />
                 <Route path='guide' element={<Guide />} />
                 <Route path='login' element={<Login />} />
                 <Route path='donait/articles' element={<Articles />} />

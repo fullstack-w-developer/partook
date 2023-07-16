@@ -10,54 +10,58 @@ const Login = () => {
     password: Yup.string().min(6, 'رمز عبور باید حداقل ۶ کاراکتر باشد.').required('رمز عبور الزامی است.'),
   });
 
+  //for delete form after login
   const handleSubmit = (values, { resetForm }) => {
-    // دستوراتی که بعد از ثبت فرم انجام میشوند
-    console.log(values);
-    resetForm(); // برای پاک کردن فرم پس از ثبت
+    resetForm();
   };
 
   return (
-    <Formik
-      initialValues={{ name: '', email: '', password: '' }}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-    >
-      <Form className="formValidation flexCol">
-        <div className='form flexCol'>
-          <div className="nameForm flexAlign">
-            <label htmlFor="name">نام کاربری:</label>
-            <Field type="text" id="name" name="name" className="inputForm" />
+    <>
+      <div className="headFormLogin flexAlign">
+        <span>فرم ثبت نام</span>
+      </div>
+      <Formik
+        initialValues={{ name: '', email: '', password: '' }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        <Form className="formValidation flexCol">
+          <div className='form flexCol'>
+            <div className="w-full flexCol">
+              <label htmlFor="name">نام کاربری:</label>
+              <Field type="text" id="name" name="name" className="nameForm" />
+            </div>
+            <ErrorMessage name="name" component="div" className='errorText' />
           </div>
-          <ErrorMessage name="name" component="div" className='errorText' />
-        </div>
 
-        <div className="form flexCol">
-          <div className="nameForm flexAlign">
-            <label htmlFor="email">شماره تلفن:</label>
-            <Field type="number" id="number" name="number" className="inputForm" /></div>
-          <ErrorMessage name="email" component="div" className='errorText' />
-        </div>
-
-        <div className="form flexCol">
-          <div className="nameForm flexAlign">
-            <label htmlFor="password">رمز عبور:</label>
-            <Field type="password" id="password" name="password" className="inputForm" />
+          <div className="form flexCol">
+            <div className="w-full flexCol">
+              <label htmlFor="email">شماره تلفن:</label>
+              <Field type="type" id="number" name="number" className="nameForm" /></div>
+            <ErrorMessage name="email" component="div" className='errorText' />
           </div>
-          <ErrorMessage name="password" component="div" className='errorText' />
-        </div>
-        <div className="form flexCol">
-          <div className="flexAlign nameForm">
-            <label htmlFor='password'>
-              تکرار رمز عبور:
-            </label>
-            <Field type="password" id="password" name="password" className="inputForm" />
-          </div>
-          <ErrorMessage name='password' component="div" className='errorText' />
-        </div>
 
-        <button type="submit" className='submitBtn'>ثبت</button>
-      </Form>
-    </Formik>
+          <div className="form flexCol">
+            <div className="w-full flexCol">
+              <label htmlFor="password">رمز عبور:</label>
+              <Field type="password" id="password" name="password" className="nameForm" />
+            </div>
+            <ErrorMessage name="password" component="div" className='errorText' />
+          </div>
+          <div className="form flexCol">
+            <div className="flexCol w-full">
+              <label htmlFor='password'>
+                تکرار رمز عبور:
+              </label>
+              <Field type="password" id="passwordAgain" name="passwordAgain" className="nameForm" />
+            </div>
+            <ErrorMessage name='password' component="div" className='errorText' />
+          </div>
+
+          <button type="submit" className='submitBtn'>ثبت</button>
+        </Form>
+      </Formik>
+    </>
   )
 }
 

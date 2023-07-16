@@ -20,8 +20,7 @@
 
 .inputUser {
     border: 1px solid var(--border-gray);
-    width: 60%;
-    justify-content: center;
+    width: 45%;
     margin: 30px auto 30px;
     padding: 8px 10px 8px 20px;
     border-radius: 39px;
@@ -49,4 +48,11 @@
 
 .inputUser button:hover {
     opacity: .8;
+}
+
+.showErrorText {
+    color: red;
+    font-weight: 600;
+    margin-top: 24px;
+    font-size: 19px;
 }
