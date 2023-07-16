@@ -4,14 +4,43 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
+import book from "../../assets/images/book.jpg";
+import { useState } from 'react';
 
 const Profile = () => {
+    const [counter, setCounter] = useState(15);
+    const addFiveHandler = () => {
+        for (let i = 0; i < 6; i++) {
+            setCounter(prevState => prevState + 5)
+        }
+    }
+
+    const addThreeHandler = () => {
+        setCounter(prevState => prevState + 30)
+    }
+
+    const addOneHandler = () => {
+        setCounter(counter)
+    }
     return (
         <div className='grid md:grid-cols-2 gap-4 profileTab'>
             <div className='payBox'>
                 <p className='flexAlign'>
-                    به عزیزات یه کتاب هدیه بده
+                    برای پرتوک بک کتاب بخر
                 </p>
+                {/* counter */}
+                <div className="flexCol items-center bgCounter">
+                    <div className="flexAlign donaitCounter">
+                        <button onClick={addFiveHandler}>5</button>
+                        <button onClick={addThreeHandler}>3</button>
+                        <button onClick={addOneHandler}>1</button>
+                        <span>+</span>
+                        <img src={book} alt="book" className='imgDonait' />
+                    </div>
+                    <span className='result'>
+                        {counter} هزار تومان
+                    </span>
+                </div>
                 {/* counter */}
                 <div className="payer flexCol">
                     <span>نام پرداخت کننده(اختیاری)</span>
@@ -21,7 +50,7 @@ const Profile = () => {
                     <span>متن پیام(اختیاری)</span>
                     <textarea></textarea>
                 </div>
-                <button className='btnPay'>پرداخت</button>
+                <button className='btnPay' type='submit'>پرداخت</button>
             </div>
             <div className='aboutusProf'>
                 <p>درباره ما</p>
