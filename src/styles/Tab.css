@@ -289,3 +289,14 @@
     color: var(--color-main);
     font-weight: 600;
 }
+
+.aboutMe {
+    border-radius: 20px;
+    border: 1px solid var(--border-gray);
+    padding: 20px;
+}
+
+.aboutMe h1 {
+    color: var(--color-black);
+    font-weight: 600;
+}

@@ -8,15 +8,14 @@ import { HiShare } from "react-icons/hi";
 import { AiOutlineEye } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
-import book from "../../assets/images/book.jpg";
 import { BsBook } from "react-icons/bs";
 
-const SharePartook = () => {
+const SharePartook = ({imgProfile}) => {
   const [modal, setOpenModal] = useState(false);
     return (
         <>
             <div className='sharePartook flexCol'>
-                <img src={book} alt="book" />
+                <img src={imgProfile} alt="profile" />
                 <HiShare onClick={() => setOpenModal(!modal)} className='shareIcon' size={28} />
             </div>
             {/* modal */}
