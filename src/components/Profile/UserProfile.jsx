@@ -7,11 +7,13 @@ import "../../styles/Tab.css";
 const UserProfile = () => {
   return (
     <div>
-        <SharePartook imgProfile={userProfile}/>
+      <SharePartook imgProfile={userProfile} />
+      <div className="mt-10">
         <PayBox />
         <div className="aboutMe">
           <h1>درباره من</h1>
         </div>
+      </div>
     </div>
   )
 }

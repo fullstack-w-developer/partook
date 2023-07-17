@@ -1,0 +1,26 @@
+.dashboard {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 14px;
+    border: 1px solid var(--border-gray);
+}
+
+.dashboard p {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--color-black);
+    opacity: .8;
+}
+
+.dashboardNotif {
+    background-color: var(--bg-btn);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-main);
+    padding: 14px;
+}
+
+.dashboardNotif span {
+    color: var(--color-main);
+    font-weight: 600;
+}
