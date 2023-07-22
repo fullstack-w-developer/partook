@@ -1,7 +1,7 @@
 import React from 'react';
-import SharePartook from "../SharePartook/SharePartook";
+import SharePartook from "../components/SharePartook/SharePartook";
 import userProfile from "../../assets/images/useAvatar.png"
-import PayBox from '../Tab/PayBox';
+import PayBox from '../components/Tab/PayBox';
 import "../../styles/Tab.css";
 
 const UserProfile = () => {

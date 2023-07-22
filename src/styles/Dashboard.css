@@ -105,4 +105,47 @@
     font-weight: 800;
 }
 
-.boxEnterName {}
+.profileUserDash {
+    width: 100px;
+    align-items: center;
+}
+
+.dashboarHead {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dashboardText {
+    font-weight: 600;
+    color: var(--color-black);
+    margin-right: 30px;
+}
+
+.backToBefore {
+    color: var(--color-main);
+    margin-left: 15px;
+}
+
+.power {
+    color: var(--bg-btn-reject);
+}
+
+.setting {
+    color: var(--color-gray);
+}
+
+.textCategory {
+    font-weight: 600;
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+.paraCategory {
+    color: var(--color-black-100);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.paraCategory span {
+    margin-right: 30px;
+}
