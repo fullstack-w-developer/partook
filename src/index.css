@@ -29,6 +29,10 @@ button {
   background-color: transparent;
 }
 
+button:hover {
+  opacity: .8;
+}
+
 a {
   text-decoration: none;
 }
@@ -39,6 +43,7 @@ h1 {
 
 input:focus {
   outline: none;
+  border: 1px solid var(--bg-btn);
 }
 
 :root {
@@ -49,6 +54,8 @@ input:focus {
   --color-black: #333;
   --color-gray: #A6B0C2;
   --border-gray:#DEE2E6;
+  --bg-green:#10C469;
+  --bg-btn-reject:#FF4242;
 }
 
 @media screen and (max-width:640px) {

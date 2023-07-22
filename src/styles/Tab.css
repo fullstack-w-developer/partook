@@ -240,9 +240,8 @@
     font-weight: 600;
 }
 
-.payer textarea:focus,
-.payer input:focus {
-    border: 1px solid var(--color-main);
+.payer textarea:focus {
+    border: 1px solid var(--bg-btn);
 }
 
 .profileTab {
