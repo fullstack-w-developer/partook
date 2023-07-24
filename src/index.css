@@ -48,15 +48,15 @@ input:focus {
 
 :root {
   --color-main: #D1913C;
-  --color-secondary:#FFFFE0;
+  --color-secondary: #FFFFE0;
   --bg-btn: #ffdbad;
   --color-white: #fff;
   --color-black: #333;
-  --color-black-100:#435966;
+  --color-black-100: #435966;
   --color-gray: #A6B0C2;
-  --border-gray:#DEE2E6;
-  --bg-green:#10C469;
-  --bg-btn-reject:#FF4242;
+  --border-gray: #DEE2E6;
+  --bg-green: #10C469;
+  --bg-btn-reject: #FF4242;
 }
 
 @media screen and (max-width:640px) {

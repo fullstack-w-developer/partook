@@ -7,7 +7,7 @@ import HeadDashboard from './HeadDashboard/HeadDashboard'
 
 const Dashboard = () => {
   return (
-    <div className='md:px-20 px-10'>
+    <div className=''>
       <HeadDashboard />
       <CardBoxNotif />
       <CardBox />
