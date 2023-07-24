@@ -16,8 +16,7 @@
 .head {
     position: absolute;
     top: 0;
-    display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     z-index: 9999;
     color: #fff;
     width: 100%;

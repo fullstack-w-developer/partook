@@ -15,14 +15,14 @@ const Header = () => {
       {({ headerContent }) => (
         <div className='header-menu' >
           <Slider />
-          <div className='head flexAlign grid md:px-20 px-10'>
+          <div className='head grid grid-cols-3 md:px-20 px-10 items-center'>
             <div>
               <Button text="یک کتابفروشی پیدا کن" />
             </div>
-            <div>
+            <div className='flex justify-center'>
               <Logo />
             </div>
-            <div>
+            <div className='flex justify-end'>
               <HiOutlineMenuAlt1 className='menu-icon' size={26} onClick={() => {
                 setOpenMenu(!openMenu);
 

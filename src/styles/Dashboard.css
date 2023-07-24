@@ -233,3 +233,10 @@
 .notifications {
     justify-content: space-between;
 }
+
+.chart {
+    justify-content: center;
+    margin: 80px 0;
+    font-size: 14px;
+    font-weight: 700;
+}

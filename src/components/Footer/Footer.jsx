@@ -16,7 +16,7 @@ const Footer = () => {
             <Link to="contact" className='footerText'>تماس با ما</Link>
             <Link to="aboutus" className='footerText'>درباره ما</Link>
             <Link to="guide" className='footerText'>راهنمای سایت</Link>
-            <Link to="question" className='footerText'>سوالات متداول</Link>
+            <Link to="faq" className='footerText'>سوالات متداول</Link>
           </div>
           <div className='flexAlign socialMedia'>
             <FaLinkedinIn size={24} className='socialIcon' />
