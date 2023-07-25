@@ -26,7 +26,9 @@ const RoutePage = () => {
                 <Route path='donait/articles' element={<Articles />} />
                 <Route path='donait/termsandconditions' element={<TermsAndConditions />} />
                 <Route path="dashboard" element={<Dashboard />} />
-                <Route path='profile' element={<Profile />}/>
+                <Route path='profile' element={<Profile />} />
+                {/* <Route path="/page-with-header" component={PageWithHeader} />
+                <Route path="/page-without-header" component={PageWithoutHeader} /> */}
             </Routes>
         </div>
     )

@@ -3,16 +3,20 @@ import { ContextHeaderFooter } from './context/ContextHeaderFooter';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import RoutePage from './routePage/RoutePage';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   const HeaderContext = <p>Header</p>;
   const FooterContext = <p>Footer</p>
+  const location = useLocation();
+  const isLogin = location.pathname === '/login' || location.pathname === "/dashboard"
+  
   return (
     <>
       <ContextHeaderFooter.Provider value={{HeaderContext, FooterContext}}>
-        <Header />
+        {!isLogin && <Header />}
         <RoutePage />
-        <Footer />
+        {!isLogin && <Footer />}
       </ContextHeaderFooter.Provider>
     </>
   )

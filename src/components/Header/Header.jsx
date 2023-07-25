@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
@@ -9,6 +9,7 @@ import Slider from '../SliderShow/Slider';
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const {showHeader} = useContext(ContextHeaderFooter)
 
   return (
     <ContextHeaderFooter.Consumer>
