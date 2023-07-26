@@ -21,7 +21,7 @@ const Dropdown = () => {
         <Link className='linkMenuLeft flex' to="aboutus">درباره ما</Link>
       </div>
       <div className='dropdown flex'>
-        <Link className='linkMenuLeft flex' to="dashboard">dashboard</Link>
+        <Link className='linkMenuLeft flex' to="articlespage">مقالات</Link>
       </div>
     </div>
   )

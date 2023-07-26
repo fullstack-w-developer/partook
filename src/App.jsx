@@ -9,11 +9,11 @@ function App() {
   const HeaderContext = <p>Header</p>;
   const FooterContext = <p>Footer</p>
   const location = useLocation();
-  const isLogin = location.pathname === '/login' || location.pathname === "/dashboard"
-  
+  const isLogin = location.pathname === '/login' || location.pathname === "/dashboard" || location.pathname === "/articlespage"
+
   return (
     <>
-      <ContextHeaderFooter.Provider value={{HeaderContext, FooterContext}}>
+      <ContextHeaderFooter.Provider value={{ HeaderContext, FooterContext }}>
         {!isLogin && <Header />}
         <RoutePage />
         {!isLogin && <Footer />}

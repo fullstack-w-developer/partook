@@ -14,6 +14,7 @@
     font-weight: 700;
     margin: 20px;
     color: var(--color-black);
+    margin: 24px auto;
 }
 
 .support img {

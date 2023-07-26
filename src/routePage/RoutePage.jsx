@@ -11,6 +11,7 @@ import Articles from '../pages/Articles';
 import TermsAndConditions from '../pages/TermsAndConditions';
 import Dashboard from '../components/Dashboard/Dashboard';
 import Profile from '../components/Tab/Profile';
+import ArticlesPage from '../pages/ArticlesPage';
 
 const RoutePage = () => {
     return (
@@ -27,8 +28,7 @@ const RoutePage = () => {
                 <Route path='donait/termsandconditions' element={<TermsAndConditions />} />
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path='profile' element={<Profile />} />
-                {/* <Route path="/page-with-header" component={PageWithHeader} />
-                <Route path="/page-without-header" component={PageWithoutHeader} /> */}
+                <Route path="articlespage" element={<ArticlesPage />}/>
             </Routes>
         </div>
     )
