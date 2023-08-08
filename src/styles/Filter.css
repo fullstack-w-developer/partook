@@ -1,0 +1,52 @@
+.btnFilter {
+    border: 2px solid var(--bg-btn);
+    border-radius: 20px;
+    padding: 4px;
+    width: 120px;
+    transition: background-color .3s ease-in-out;
+    font-weight: 600;
+    opacity: .7;
+    color: var(--color-black);
+}
+
+.btnFilter:hover {
+    background-color: var(--bg-btn);
+}
+
+.colorBtn {
+    background-color: var(--bg-btn);
+    color: var(--color-white);
+}
+
+.imgFilter img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 5px 5px 0 20px;
+}
+
+.imgFilter span {
+    margin-top: 20px;
+}
+
+.headFilter {
+    justify-content: space-between;
+}
+
+.colorFill {
+    color: var(--color-main);
+    font-weight: 600;
+}
+
+.headerFilter {
+    margin: 15px 0;
+    color: var(--color-main);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.contentFilter {
+    color: var(--color-main);
+    opacity: .9;
+}

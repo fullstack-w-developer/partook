@@ -33,14 +33,12 @@ const Login = () => {
             </div>
             <ErrorMessage name="name" component="div" className='errorText' />
           </div>
-
           <div className="form flexCol">
             <div className="w-full flexCol">
-              <label htmlFor="email">شماره تلفن:</label>
-              <Field type="type" id="number" name="number" className="nameForm" /></div>
+              <label htmlFor="name">شماره تلفن:</label>
+              <Field type="type" id="name" name="name" className="nameForm" /></div>
             <ErrorMessage name="email" component="div" className='errorText' />
           </div>
-
           <div className="form flexCol">
             <div className="w-full flexCol">
               <label htmlFor="password">رمز عبور:</label>
@@ -50,7 +48,7 @@ const Login = () => {
           </div>
           <div className="form flexCol">
             <div className="flexCol w-full">
-              <label htmlFor='password'>
+              <label htmlFor='passwordAgain'>
                 تکرار رمز عبور:
               </label>
               <Field type="password" id="passwordAgain" name="passwordAgain" className="nameForm" />
