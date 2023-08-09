@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "../styles/Login.css";
-import axios from "axios"
+import axios from "axios";
 
 const Login = () => {
   const validationSchema = Yup.object().shape({

@@ -3,7 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 import "../../styles/Dashboard.css"
 
 const data = [
-  { name: 'فروردین', value: 400 },
+  { name: 'فروردین', value: 1000 },
   { name: 'اردیبهشت', value: 1398 },
   { name: 'خرداد', value: 9800 },
   { name: 'تیر', value: 3908 },

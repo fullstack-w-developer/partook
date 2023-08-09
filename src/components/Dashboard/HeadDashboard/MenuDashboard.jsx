@@ -14,7 +14,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai"
 const MenuDashboard = ({ state, setState }) => {
   return (
     <>
-      <div className='w-[30%] menuDashboard'>
+      <div className='menuDashboard'>
         <div className='closeMenu flexAlign' onClick={() => setState(!state)}>
           <AiOutlineCloseCircle size={24} />
         </div>
