@@ -1,17 +1,17 @@
 import React from 'react';
 import SharePartook from "../components/SharePartook/SharePartook";
-import userProfile from "../../assets/images/useAvatar.png"
+import userProfile from "../assets/images/userAvatar.png";
 import PayBox from '../components/Tab/PayBox';
-import "../../styles/Tab.css";
+import "../styles/Tab.css";
 
 const UserProfile = () => {
   return (
-    <div>
+    <div className='md:px-20 px-10 py-20'>
       <SharePartook imgProfile={userProfile} />
-      <div className="mt-10">
+      <div className="mt-10 grid md:grid-cols-2 grid-cols-1 gap-4">
         <PayBox />
         <div className="aboutMe">
-          <h1>درباره من</h1>
+          <p>درباره من</p>
         </div>
       </div>
     </div>

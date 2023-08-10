@@ -21,7 +21,7 @@
 .inputUser {
     border: 1px solid var(--border-gray);
     width: 45%;
-    margin: 30px auto 30px;
+    margin: 30px auto;
     padding: 8px 10px 8px 20px;
     border-radius: 39px;
     justify-content: space-between;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../../styles/Dropdown.css"
+import "../../styles/Dropdown.css";
 
 const Dropdown = () => {
   return (
@@ -22,6 +22,9 @@ const Dropdown = () => {
       </div>
       <div className='dropdown flex'>
         <Link className='linkMenuLeft flex' to="articlespage">مقالات</Link>
+      </div>
+      <div className='dropdown flex'>
+        <Link className='linkMenuLeft flex' to="userprofile">پنل کاربری</Link>
       </div>
     </div>
   )

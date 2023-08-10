@@ -12,11 +12,10 @@ const Menu = ({ state, setState }) => {
       <Logo />
       <Dropdown />
       <div className='content-menu flexCol'>
-        <h1>Visit Us</h1>
-        <p>Tehran,Africa St, tehran 9899,IR</p>
+        <h1>ما رو دنبال کنید</h1>
+        <p>تهران، خیابان افریقا</p>
         <p>Bookshop@test.com</p>
-        <span></span>
-        <p>Booking Request</p>
+        <p>سفارش کتاب</p>
         <a href='#'>+987654321</a>
       </div>
     </div>

@@ -295,7 +295,9 @@
     padding: 20px;
 }
 
-.aboutMe h1 {
+.aboutMe p {
     color: var(--color-black);
     font-weight: 600;
+    opacity: .8;
+    font-size: 22px;
 }

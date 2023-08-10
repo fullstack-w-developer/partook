@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import book from "../../assets/images/book.jpg";
 
 const PayBox = () => {
     const [counter, setCounter] = useState(15);
     const addFiveHandler = () => {
-        for (let i = 0; i < 6; i++) {
-            setCounter(prevState => prevState + 5)
+        for (let i = 0; i < 1; i++) {
+            setCounter(prevState => prevState * 5)
         }
     }
 
     const addThreeHandler = () => {
-        setCounter(prevState => prevState + 30)
+        for (let i = 0; i < 1; i++) {
+            setCounter(prevState => prevState * 3)
+        }
     }
 
     const addOneHandler = () => {

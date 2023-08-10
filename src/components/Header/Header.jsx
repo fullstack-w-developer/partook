@@ -26,7 +26,6 @@ const Header = () => {
             <div className='flex justify-end'>
               <HiOutlineMenuAlt1 className='menu-icon' size={26} onClick={() => {
                 setOpenMenu(!openMenu);
-
               }} />
             </div>
             {
