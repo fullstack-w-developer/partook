@@ -15,6 +15,7 @@ import Profile from '../components/Tab/Profile';
 import ArticlesPage from '../pages/ArticlesPage';
 import UserPanel from "../pages/UserPanel";
 import Payment from '../pages/Payment';
+import VerifyAccount from '../pages/VerifyAccount';
 
 const RoutePage = () => {
     return (
@@ -35,6 +36,7 @@ const RoutePage = () => {
                 <Route path="articlespage" element={<ArticlesPage />} />
                 <Route path="userpanel" element={<UserPanel />} />
                 <Route path="payment" element={<Payment />} />
+                <Route path="verifyaccount" element={<VerifyAccount />} />
             </Routes>
         </div>
     )

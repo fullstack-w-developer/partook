@@ -29,8 +29,8 @@ button {
   background-color: transparent;
 }
 
-button:hover {
-  opacity: .8;
+button:active {
+  transform: scaleY(1.1);
 }
 
 a {

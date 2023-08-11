@@ -2,23 +2,29 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "../styles/Login.css";
-import axios from "axios";
+import AuthServices from "../services/AuthServices";
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   const validationSchema = Yup.object().shape({
     name: Yup.string().required('نام الزامی است.'),
+    number: Yup.string().required('شماره تلفن الزامی است'),
     password: Yup.string().min(6, 'رمز عبور باید حداقل ۶ کاراکتر باشد.').required('رمز عبور الزامی است.'),
+    passwordAgain: Yup.string().oneOf([Yup.ref("password"), null], "تکرار رمز عبور مطابفت ندارد.").required("تکرار رمز عبور الزامی است.")
   });
 
   //for delete form after login
   const handleSubmit = async (values, { resetForm }) => {
     try {
-      //send a POST request to backend
-      const response = await axios.post("http://78.109.200.116:1370/api/Authenticate/RegisterUser");
-
-      if(response.data.success){
-        //clear the form
-        resetForm(); 
+      const userData = {
+        name: values.name,
+        number: values.number,
+        password: values.password,
+        passwordAgain:values.passwordAgain
+      };
+      const success = await AuthServices.RegisterUser(userData);
+      if (success) {
+        resetForm()
       }
     } catch (error) {
       // handle error
@@ -32,7 +38,7 @@ const Register = () => {
         <span>فرم ثبت نام</span>
       </div>
       <Formik
-        initialValues={{ name: '', password: '' }}
+        initialValues={{ name: '', number: '', password: '', passwordAgain: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
@@ -65,10 +71,11 @@ const Register = () => {
               </label>
               <Field type="password" id="passwordAgain" name="passwordAgain" className="nameForm" />
             </div>
-            <ErrorMessage name='password' component="div" className='errorText' />
+            <ErrorMessage name='passwordAgain' component="div" className='errorText' />
           </div>
-
-          <button type="submit" className='submitBtn'>ثبت</button>
+          <Link to="activationcode" className='w-full'>
+            <button type="submit" className='submitBtn'>ثبت</button>
+          </Link>
         </Form>
       </Formik>
     </>
