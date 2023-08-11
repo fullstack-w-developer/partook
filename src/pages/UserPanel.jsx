@@ -4,7 +4,7 @@ import userProfile from "../assets/images/userAvatar.png";
 import PayBox from '../components/Tab/PayBox';
 import "../styles/Tab.css";
 
-const UserProfile = () => {
+const UserPanel = () => {
   return (
     <div className='md:px-20 px-10 py-20'>
       <SharePartook imgProfile={userProfile} />
@@ -18,4 +18,4 @@ const UserProfile = () => {
   )
 }
 
-export default UserProfile
+export default UserPanel

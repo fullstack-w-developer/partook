@@ -232,6 +232,21 @@
     cursor: pointer;
 }
 
+.notifIcon {
+    position: relative;
+}
+
+.notifIcon span {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--bg-btn-reject);
+    top: 4px;
+    right: 5px; 
+}
+
 .notifications {
     justify-content: space-between;
 }

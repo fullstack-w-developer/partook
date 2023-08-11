@@ -9,7 +9,10 @@ const Dropdown = () => {
         <Link className='linkMenuLeft flex' to="/">صفحه اصلی</Link>
       </div>
       <div className='dropdown flex'>
-        <Link className='linkMenuLeft flex' to="login">ثبت نام</Link>
+        <Link className='linkMenuLeft flex' to="register">ثبت نام</Link>
+      </div>
+      <div className='dropdown flex'>
+        <Link className='linkMenuLeft flex' to="login">ورود</Link>
       </div>
       <div className='dropdown flex'>
         <Link className='linkMenuLeft flex' to="contact">تماس با ما</Link>
@@ -24,7 +27,7 @@ const Dropdown = () => {
         <Link className='linkMenuLeft flex' to="articlespage">مقالات</Link>
       </div>
       <div className='dropdown flex'>
-        <Link className='linkMenuLeft flex' to="userprofile">پنل کاربری</Link>
+        <Link className='linkMenuLeft flex' to="UserPanel">پنل کاربری</Link>
       </div>
     </div>
   )

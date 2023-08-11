@@ -6,13 +6,15 @@ import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
 import FAQ from "../pages/FAQ";
 import Guide from "../pages/Guide";
+import Register from '../pages/Register';
 import Login from '../pages/Login';
 import Articles from '../pages/Articles';
 import TermsAndConditions from '../pages/TermsAndConditions';
 import Dashboard from '../components/Dashboard/Dashboard';
 import Profile from '../components/Tab/Profile';
 import ArticlesPage from '../pages/ArticlesPage';
-import UserProfile from "../pages/UserProfile"
+import UserPanel from "../pages/UserPanel";
+import Payment from '../pages/Payment';
 
 const RoutePage = () => {
     return (
@@ -24,13 +26,15 @@ const RoutePage = () => {
                 <Route path='aboutus' element={<AboutUs />} />
                 <Route path='faq' element={<FAQ />} />
                 <Route path='guide' element={<Guide />} />
+                <Route path='register' element={<Register />} />
                 <Route path='login' element={<Login />} />
                 <Route path='donait/articles' element={<Articles />} />
                 <Route path='donait/termsandconditions' element={<TermsAndConditions />} />
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path='profile' element={<Profile />} />
                 <Route path="articlespage" element={<ArticlesPage />} />
-                <Route path="userprofile" element={<UserProfile />} />
+                <Route path="userpanel" element={<UserPanel />} />
+                <Route path="payment" element={<Payment />} />
             </Routes>
         </div>
     )
