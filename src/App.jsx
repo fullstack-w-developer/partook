@@ -9,7 +9,7 @@ function App() {
   const HeaderContext = <p>Header</p>;
   const FooterContext = <p>Footer</p>
   const location = useLocation();
-  const isLogin = location.pathname === '/register' || location.pathname === "/dashboard" || location.pathname === "/articlespage" || location.pathname === "/userpanel" || location.pathname === "/login" || location.pathname === '/payment' || location.pathname === "/activationcode"
+  const isLogin = location.pathname === '/register' || location.pathname === "/dashboard" || location.pathname === "/articlespage" || location.pathname === "/userpanel" || location.pathname === "/login" || location.pathname === '/payment' || location.pathname === "/register/verifyaccount"
 
   return (
     <>

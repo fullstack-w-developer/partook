@@ -73,7 +73,7 @@ const Register = () => {
             </div>
             <ErrorMessage name='passwordAgain' component="div" className='errorText' />
           </div>
-          <Link to="activationcode" className='w-full'>
+          <Link to="verifyaccount" className='w-full'>
             <button type="submit" className='submitBtn'>ثبت</button>
           </Link>
         </Form>

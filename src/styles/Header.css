@@ -16,11 +16,9 @@
 .head {
     position: absolute;
     top: 0;
-    /* justify-content: space-between; */
     z-index: 9999;
     color: #fff;
     width: 100%;
-    margin-top: 42px;
 }
 
 .menu-left {

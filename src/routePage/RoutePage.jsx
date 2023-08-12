@@ -36,7 +36,7 @@ const RoutePage = () => {
                 <Route path="articlespage" element={<ArticlesPage />} />
                 <Route path="userpanel" element={<UserPanel />} />
                 <Route path="payment" element={<Payment />} />
-                <Route path="verifyaccount" element={<VerifyAccount />} />
+                <Route path="register/verifyaccount" element={<VerifyAccount />} />
             </Routes>
         </div>
     )

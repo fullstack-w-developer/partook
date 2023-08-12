@@ -41,6 +41,14 @@ h1 {
   font-size: 35px;
 }
 
+input {
+  border: 1px solid var(--border-gray);
+  border-radius: 7px;
+  padding: 6px 20px;
+  height: 40px;
+  background-color: transparent;
+}
+
 input:focus {
   outline: none;
   border: 1px solid var(--bg-btn);
