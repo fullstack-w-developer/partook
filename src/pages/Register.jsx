@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "../styles/Login.css";
 import AuthServices from "../services/AuthServices";
-import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const validationSchema = Yup.object().shape({
@@ -24,7 +24,7 @@ const Register = () => {
       };
       const success = await AuthServices.RegisterUser(userData);
       if (success) {
-        resetForm()
+        resetForm();
       }
     } catch (error) {
       // handle error
@@ -40,7 +40,14 @@ const Register = () => {
       <Formik
         initialValues={{ name: '', number: '', password: '', passwordAgain: '' }}
         validationSchema={validationSchema}
-        onSubmit={handleSubmit}
+        onSubmit={(values, actions) => {
+          if (!values.name || !values.number || !values.password || !values.passwordAgain) {
+            toast.error("لطفا تمام فیلد ها را پر کنید!");
+          } else {
+            handleSubmit(values, actions);
+            history.push("/verifyaccount"); 
+          }
+        }}
       >
         <Form className="formValidation flexCol">
           <div className='form flexCol'>
@@ -73,9 +80,7 @@ const Register = () => {
             </div>
             <ErrorMessage name='passwordAgain' component="div" className='errorText' />
           </div>
-          <Link to="verifyaccount" className='w-full'>
-            <button type="submit" className='submitBtn'>ثبت</button>
-          </Link>
+          <button type="submit" className='submitBtn'>ثبت</button>
         </Form>
       </Formik>
     </>
