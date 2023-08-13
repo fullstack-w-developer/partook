@@ -1,91 +1,104 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import "../styles/Login.css";
-import AuthServices from "../services/AuthServices";
+import { useNavigate  } from 'react-router-dom'; // اضافه کردن استفاده از useHistory
 import { toast } from 'react-toastify';
+import AuthServices from "../services/AuthServices";
+import "../styles/Login.css";
 
 const Register = () => {
+  const navigate = useNavigate (); // ایجاد navigate برای استفاده در redirectToVerifyAccount
+
   const validationSchema = Yup.object().shape({
-    name: Yup.string().required('نام الزامی است.'),
-    number: Yup.string().required('شماره تلفن الزامی است'),
+    userName: Yup.string().required('نام الزامی است.'),
+    mobile: Yup.string().required('شماره تلفن الزامی است'),
     password: Yup.string().min(6, 'رمز عبور باید حداقل ۶ کاراکتر باشد.').required('رمز عبور الزامی است.'),
-    passwordAgain: Yup.string().oneOf([Yup.ref("password"), null], "تکرار رمز عبور مطابفت ندارد.").required("تکرار رمز عبور الزامی است.")
+    confirmPassword: Yup.string().oneOf([Yup.ref("password"), null], "تکرار رمز عبور مطابقت ندارد.").required("تکرار رمز عبور الزامی است.")
   });
 
-  //for delete form after login
   const handleSubmit = async (values, { resetForm }) => {
     try {
+      if((!values.userName || !values.mobile || !values.password || !values.confirmPassword)){
+        toast.error("please fill")
+        return;
+      } 
+
+      if(values.password !== values.confirmPassword){
+        toast.error("not match")
+        return;
+      }
       const userData = {
-        name: values.name,
-        number: values.number,
+        userName: values.userName,
+        mobile: values.mobile,
         password: values.password,
-        passwordAgain:values.passwordAgain
+        confirmPassword: values.confirmPassword
       };
       const success = await AuthServices.RegisterUser(userData);
       if (success) {
         resetForm();
+        navigate("/verifyaccount"); // انتقال به مسیر پس از ثبت نام موفقیت‌آمیز
       }
     } catch (error) {
-      // handle error
-      console.log("Error submiting form:", error);
+      console.log("Error submitting form:", error);
     }
   };
 
   return (
-    <>
+    <div>
       <div className="headFormLogin flexAlign">
         <span>فرم ثبت نام</span>
       </div>
       <Formik
-        initialValues={{ name: '', number: '', password: '', passwordAgain: '' }}
+        initialValues={{ userName: '', mobile: '', password: '', confirmPassword: '' }}
         validationSchema={validationSchema}
         onSubmit={(values, actions) => {
-          if (!values.name || !values.number || !values.password || !values.passwordAgain) {
+          if (!values.userName || !values.mobile || !values.password || !values.confirmPassword) {
             toast.error("لطفا تمام فیلد ها را پر کنید!");
           } else {
             handleSubmit(values, actions);
-            history.push("/verifyaccount"); 
           }
         }}
       >
-        <Form className="formValidation flexCol">
-          <div className='form flexCol'>
-            <div className="w-full flexCol">
-              <label htmlFor="name">نام کاربری:</label>
-              <Field autoFocus type="text" id="name" name="name" className="nameForm" />
+        {({ isSubmitting }) => (
+          <Form className="formValidation flexCol">
+            <div className='form flexCol'>
+              <div className="w-full flexCol">
+                <label htmlFor="userName">نام کاربری:</label>
+                <Field autoFocus type="text" id="userName" name="userName" className="nameForm" />
+              </div>
+              <ErrorMessage name="userName" component="div" className='errorText' />
             </div>
-            <ErrorMessage name="name" component="div" className='errorText' />
-          </div>
-          <div className="form flexCol">
-            <div className="w-full flexCol">
-              <label htmlFor="number">شماره تلفن:</label>
-              <Field type="text" id="number" name="number" className="nameForm" />
+            <div className="form flexCol">
+              <div className="w-full flexCol">
+                <label htmlFor="mobile">شماره تلفن:</label>
+                <Field type="text" id="mobile" name="mobile" className="nameForm" />
+              </div>
+              <ErrorMessage name="mobile" component="div" className='errorText' />
             </div>
-            <ErrorMessage name="name" component="div" className='errorText' />
-          </div>
-          <div className="form flexCol">
-            <div className="w-full flexCol">
-              <label htmlFor="password">رمز عبور:</label>
-              <Field type="password" id="password" name="password" className="nameForm" />
+            <div className="form flexCol">
+              <div className="w-full flexCol">
+                <label htmlFor="password">رمز عبور:</label>
+                <Field type="password" id="password" name="password" className="nameForm" />
+              </div>
+              <ErrorMessage name="password" component="div" className='errorText' />
             </div>
-            <ErrorMessage name="password" component="div" className='errorText' />
-          </div>
-          <div className="form flexCol">
-            <div className="flexCol w-full">
-              <label htmlFor='passwordAgain'>
-                تکرار رمز عبور:
-              </label>
-              <Field type="password" id="passwordAgain" name="passwordAgain" className="nameForm" />
+            <div className="form flexCol">
+              <div className="flexCol w-full">
+                <label htmlFor='confirmPassword'>
+                  تکرار رمز عبور:
+                </label>
+                <Field type="password" id="confirmPassword" name="confirmPassword" className="nameForm" />
+              </div>
+              <ErrorMessage name='confirmPassword' component="div" className='errorText' />
             </div>
-            <ErrorMessage name='passwordAgain' component="div" className='errorText' />
-          </div>
-          <button type="submit" className='submitBtn'>ثبت</button>
-        </Form>
+            <button type="submit" className='submitBtn' disabled={isSubmitting}>
+              ثبت
+            </button>
+          </Form>
+        )}
       </Formik>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Register
-
+export default Register;

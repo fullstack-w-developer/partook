@@ -1,9 +1,5 @@
-// import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -16,12 +12,11 @@ import bookSell from "../../assets/images/bookSell.jpg";
 export default () => {
   return (
     <Swiper
-      // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       slidesPerView={1}
       spaceBetween={10}
       autoplay={{
-        delay:5500,
+        delay: 5500,
       }}
       loop={true}
       breakpoints={{
@@ -29,13 +24,13 @@ export default () => {
       }}
     >
       <SwiperSlide>
-        <Slide imgSlide={imgInside} />
+        <Slide imgSlide={imgInside} textMain="مطالعه، یگانه راهی است برای آشنایی و گفتگو با بزرگان روزگار که قرن‌ها پیش در دنیا به سر برده و اکنون در زیر خاک منزل دارند." />
       </SwiperSlide>
       <SwiperSlide>
-        <Slide imgSlide={imgOutside} />
+        <Slide imgSlide={imgOutside} textMain="کتاب راستگوترین، بی‌توقع‌ترین، مفیدترین و همیشگی‌ترین رفیق برای هر انسان است." />
       </SwiperSlide>
       <SwiperSlide>
-        <Slide imgSlide={bookSell} />
+        <Slide imgSlide={bookSell} textMain="مراقب لحظات آزاد خود باشید. آن لحظات مانند الماس‌های نتراشیده‌اند؛ اگر آن‌ها را بتراشید و خرد کنید؛ ارزش حقیقی خود را از دست می‌دهند .اگر مراقب آن‌ها باشید؛ شفاف‌تر و درخشنده‌تر جلوه خواهند کرد" />
       </SwiperSlide>
     </Swiper>
   );
