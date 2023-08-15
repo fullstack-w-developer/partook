@@ -33,7 +33,7 @@ const Register = () => {
       const activationCodeResponse = axios.post("http://78.109.200.116:1370/api/Authenticate/GenerateVerificationCodeOnRegisterUser")
       navigate("/verifyaccount", { state: { activationCode: activationCodeResponse.data.code } });
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.log("Error submitting form:", error);
     }
   };
 
@@ -43,7 +43,7 @@ const Register = () => {
         <span>فرم ثبت نام</span>
       </div>
       <Formik
-        initialValues={{ userName: '', mobile: '', password: '', confirmPassword: '', verficationCode: "" }}
+        initialValues={{ userName: '', mobile: '', password: '', confirmPassword: '', verficationCode: "string" }}
         validationSchema={validationSchema}
         onSubmit={(values, actions) => {
           if (!values.userName || !values.mobile || !values.password || !values.confirmPassword) {
