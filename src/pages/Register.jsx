@@ -1,11 +1,12 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from 'react-router-dom'; // اضافه کردن استفاده از useHistory
+import { useNavigate } from 'react-router-dom'; // اضافه کردن استفاده از useNavigate
 import { toast } from 'react-toastify';
 import AuthServices from "../services/AuthServices";
 import "../styles/Login.css";
 import axios from 'axios';
+import swal from 'sweetalert';
 
 const Register = () => {
   const navigate = useNavigate(); // ایجاد navigate برای استفاده در redirectToVerifyAccount
@@ -29,16 +30,25 @@ const Register = () => {
 
       const response = await AuthServices.RegisterUserApi(userData);
       resetForm();
-      // ارسال درخواست به سرور برای دریافت کد فعالسازی
-      const activationCodeResponse = axios.post("http://78.109.200.116:1370/api/Authenticate/GenerateVerificationCodeOnRegisterUser")
-      navigate("/verifyaccount", { state: { activationCode: activationCodeResponse.data.code } });
+      if(response && response.success){
+        // ارسال درخواست به سرور برای دریافت کد فعالسازی
+        const activationCodeResponse = axios.post("http://78.109.200.116:1370/api/Authenticate/GenerateVerificationCodeOnRegisterUser")
+        navigate("/verifyaccount", { state: { activationCode: activationCodeResponse.data.code } });
+      } else {
+        swal("مشکلی در ثبت نام رخ داده است")
+      }
     } catch (error) {
       console.log("Error submitting form:", error);
+      if(error.response){
+        swal("خطا", error.response.data.message, "error")
+      } else {
+        swal("مشکلی در ارتباط با سرور پیش امد لطفا دوباره تلاش کنید.")
+      }
     }
   };
 
   return (
-    <div>
+    <div className='md:px-20 px-10'>
       <div className="headFormLogin flexAlign">
         <span>فرم ثبت نام</span>
       </div>
